@@ -1,0 +1,148 @@
+:root {
+  --main-bg: hsl(217, 54%, 11%);
+  --card-bg: hsl(216, 50%, 16%);
+  --line-color: hsl(215, 32%, 27%);
+  --white-color: hsl(0, 0%, 100%);
+  --cyan: hsl(178, 100%, 50%);
+  --soft-blue: hsl(215, 51%, 70%);
+  --font-size: 18px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--main-bg);
+  font-size: 18px;
+  font-family: 'Outfit', sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.attribution {
+  width: 100%;
+  bottom: 20px;
+  position: absolute;
+  font-size: 11px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.card {
+  background: var(--card-bg);
+  padding: 20px;
+  width: 300px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: rgba(0,0,0,0.5) 0px 0px 25px 10px;
+}
+
+.thumbnail #equilibrium {
+  border-radius: 10px;
+  width: 100%;
+  transition: filter .3s ease-in-out;
+  cursor: pointer;
+}
+
+.thumbnail #equilibrium:hover {
+  /*background: var(--cyan);*/
+  filter: blur(3px);
+  cursor: pointer;
+}
+
+.thumbnail #eye-icon {
+  display: block;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: var(--soft-blue);
+}
+
+.thumbnail #equilibrium:hover #eye-icon {
+  display: block;
+}
+
+.title {
+  color: var(--cyan);
+  cursor: pointer;
+}
+
+.description {
+  margin-top: 0;
+  color: var(--soft-blue);
+}
+
+.price-box {
+  font-size: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.price-box .price {
+  display: flex;
+  align-items: center;
+  color: var(--cyan);
+}
+
+.price-box .time {
+  display: flex;
+  align-items: center;
+  color: var(--soft-blue);
+}
+
+.price-box .time img {
+  margin-right: 5px;
+}
+
+.price-box .price img {
+  margin-right: 5px;
+}
+
+.separator {
+  margin-top: 20px;
+  height: 1px;
+  width: 100%;
+  background: var(--line-color);
+}
+
+.creator {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.creator .profile-picture img {
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--white-color);
+  border-radius: 50%;
+}
+
+.creator-info {
+  color: var(--soft-blue);
+  margin-left: 20px;
+  font-size: 14px;
+}
+
+.creator-info .creator-name {
+  cursor: pointer;
+  font-weight: 400;
+  color: var(--cyan);
+}
+
+@media screen and (max-width: 375px){
+  .card {
+    width: 250px;
+  }
+}
