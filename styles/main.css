@@ -52,18 +52,17 @@ body {
 }
 
 .thumbnail #equilibrium:hover {
-  /*background: var(--cyan);*/
   filter: blur(3px);
   cursor: pointer;
 }
 
 .thumbnail #eye-icon {
-  display: block;
+  display: none;
   width: 32px;
   height: 32px;
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 25%;
+  left: 25%;
   background: var(--soft-blue);
 }
 
@@ -72,8 +71,12 @@ body {
 }
 
 .title {
-  color: var(--cyan);
+  color: var(--white-color);
   cursor: pointer;
+}
+
+.title:hover {
+  color: var(--cyan);
 }
 
 .description {
@@ -138,6 +141,10 @@ body {
 .creator-info .creator-name {
   cursor: pointer;
   font-weight: 400;
+  color: var(--white-color);
+}
+
+.creator-info .creator-name:hover {
   color: var(--cyan);
 }
 
